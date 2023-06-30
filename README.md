@@ -1,2 +1,2 @@
 # streamlit_tutorial
-A streamlit based app created :smiley:
+A streamlit based app created :smiley: ♡
