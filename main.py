@@ -2,7 +2,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+<<<<<<< HEAD
 st.title('hellooooo pickups in NYC')
+||||||| parent of 4ea4681 (Merge remote changes)
+st.title('Uber pickups in NYC')
+=======
+st.title('uberrr pickups in NYC')
+>>>>>>> 4ea4681 (Merge remote changes)
 
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
