@@ -74,7 +74,7 @@ def contact_us():
     # Add a button to redirect to the HTML page
     if st.button("Visit our Website"):
         # Replace "path/to/your/html/file.html" with the actual path to your HTML file
-         st.markdown(r'<a href="C:\Users\AMIT\streamlit_tutorial\hel.html" target="_blank">Click here</a>', unsafe_allow_html=True)
+         st.markdown(r'<a href="hel.html" target="_blank">Click here</a>', unsafe_allow_html=True)
 
 def main():
     file_upload_example()
