@@ -4,6 +4,23 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+
+  def main():
+    st.title("Contact Us")
+    
+    # Add your contact information
+    st.write("For any inquiries, please reach out to us at:")
+    st.write("- Email: contact@example.com")
+    st.write("- Phone: +1 123-456-7890")
+    
+    # Add a button to redirect to the HTML page
+    if st.button("Visit our Website"):
+        # Replace "path/to/your/html/file.html" with the actual path to your HTML file
+        st.markdown(f'<a href="C:\Users\AMIT\streamlit_tutorial.html" target="_blank">Click here</a>', unsafe_allow_html=True)
+
+ if __name__ == "__main__":
+    main()
+
 st.title('uber pickups in NYC')
 
 DATE_COLUMN = 'date/time'
@@ -64,18 +81,4 @@ if __name__ == "__main__":
     main()
 
 
-    def main():
-    st.title("Contact Us")
-    
-    # Add your contact information
-    st.write("For any inquiries, please reach out to us at:")
-    st.write("- Email: contact@example.com")
-    st.write("- Phone: +1 123-456-7890")
-    
-    # Add a button to redirect to the HTML page
-    if st.button("Visit our Website"):
-        # Replace "path/to/your/html/file.html" with the actual path to your HTML file
-        st.markdown(f'<a href="C:\Users\AMIT\streamlit_tutorial.html" target="_blank">Click here</a>', unsafe_allow_html=True)
-
-if __name__ == "__main__":
-    main()
+   
