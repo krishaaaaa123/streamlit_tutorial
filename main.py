@@ -69,7 +69,7 @@ def file_upload():
         
         # Add, commit, and push the file to Git
        
-         git_add = subprocess.run(["git", "-C", " https://github.com/krishaaaaa123/streamlit_tutorial", "add", file_path])
+        git_add = subprocess.run(["git", "-C", " https://github.com/krishaaaaa123/streamlit_tutorial", "add", file_path])
         git_commit = subprocess.run(["git", "-C", " https://github.com/krishaaaaa123/streamlit_tutorial", "commit", "-m", "Added file"])
         git_push = subprocess.run(["git", "-C", " https://github.com/krishaaaaa123/streamlit_tutorial", "push", "streamlit_tutorial", "main"], input="krishaaaaa123:Krisha14#55", encoding="utf-8")
         
