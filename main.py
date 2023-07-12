@@ -71,7 +71,7 @@ def file_upload():
        
         git_add = subprocess.run(["git", "-C", " https://github.com/krishaaaaa123/streamlit_tutorial", "add", file_path])
         git_commit = subprocess.run(["git", "-C", " https://github.com/krishaaaaa123/streamlit_tutorial", "commit", "-m", "Added file"])
-        git_push = subprocess.run(["git", "-C", " https://github.com/krishaaaaa123/streamlit_tutorial", "push", "streamlit_tutorial", "main"], input="krishaaaaa123:Krisha14#55", encoding="utf-8")
+        git_push = subprocess.run(["git", "-C", " https://github.com/krishaaaaa123/streamlit_tutorial", "push", "streamlit_tutorial", "main"], input="krishaaaaa123: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", encoding="utf-8")
         
         
         if git_push.returncode == 0:
