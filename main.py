@@ -3,6 +3,33 @@ import streamlit as st
 
 import pandas as pd
 import numpy as np
+import os
+import subprocess
+
+def main():
+    st.title("File Upload and Git Push Example")
+    
+    # Display a file uploader widget
+    uploaded_file = st.file_uploader("Choose a file")
+    
+    if uploaded_file is not None:
+        # Save the uploaded file to a temporary location
+        file_path = os.path.join("/tmp", uploaded_file.name)
+        with open(file_path, "wb") as f:
+            f.write(uploaded_file.read())
+        
+        # Add, commit, and push the file to Git
+        git_add = subprocess.run(["git", "add", file_path])
+        git_commit = subprocess.run(["git", "commit", "-m", "Added file"])
+        git_push = subprocess.run(["git", "push", "origin", "master"])
+        
+        if git_push.returncode == 0:
+            st.success("File uploaded and pushed to Git successfully!")
+        else:
+            st.error("Failed to push the file to Git.")
+    
+if __name__ == "__main__":
+    main()
 
 
  
