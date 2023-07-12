@@ -74,11 +74,7 @@ def file_upload():
         git_push = subprocess.run(["git", "-C", " https://github.com/krishaaaaa123/streamlit_tutorial", "push", "streamlit_tutorial", "main"], input="krishaaaaa123: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", encoding="utf-8")
         
         
-        if git_push.returncode == 0:
-            st.success("File uploaded and pushed to Git successfully!")
-        else:
-            st.error("Failed to push the file to Git.")
-
+        
 
 def contact_us():
     st.title("Contact Us")
