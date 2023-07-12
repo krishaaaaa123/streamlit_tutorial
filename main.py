@@ -70,7 +70,7 @@ def file_upload():
         # Add, commit, and push the file to Git
         git_add = subprocess.run(["git", "add", file_path])
         git_commit = subprocess.run(["git", "commit", "-m", "Added file"])
-        git_push = subprocess.run(["git", "push", "origin", "master"])
+        git_push = subprocess.run(["git", "push", "streamlit_tutorial", "main"])
         
         if git_push.returncode == 0:
             st.success("File uploaded and pushed to Git successfully!")
