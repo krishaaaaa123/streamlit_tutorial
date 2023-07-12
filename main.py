@@ -55,7 +55,7 @@ st.subheader('Map of all pickups at %s:00' % hour_to_filter)
 st.map(filtered_data)
 
 
-def main():
+def file_upload():
     st.title("File Upload and Git Push Example")
     
     # Display a file uploader widget
@@ -92,8 +92,8 @@ def contact_us():
          st.markdown(r'<a href="/pages/hel.html" target="_blank">Click here</a>', unsafe_allow_html=True)
 
 def main():
-   File_Upload_and_Git_Push_Example_()
-    contact_us()
+  file_upload()
+  contact_us()
 
 if __name__ == "__main__":
     main()
