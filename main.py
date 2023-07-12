@@ -6,30 +6,7 @@ import numpy as np
 import os
 import subprocess
 
-def main():
-    st.title("File Upload and Git Push Example")
-    
-    # Display a file uploader widget
-    uploaded_file = st.file_uploader("Choose a file")
-    
-    if uploaded_file is not None:
-        # Save the uploaded file to a temporary location
-        file_path = os.path.join("/tmp", uploaded_file.name)
-        with open(file_path, "wb") as f:
-            f.write(uploaded_file.read())
-        
-        # Add, commit, and push the file to Git
-        git_add = subprocess.run(["git", "add", file_path])
-        git_commit = subprocess.run(["git", "commit", "-m", "Added file"])
-        git_push = subprocess.run(["git", "push", "origin", "master"])
-        
-        if git_push.returncode == 0:
-            st.success("File uploaded and pushed to Git successfully!")
-        else:
-            st.error("Failed to push the file to Git.")
-    
-if __name__ == "__main__":
-    main()
+
 
 
  
@@ -78,17 +55,28 @@ st.subheader('Map of all pickups at %s:00' % hour_to_filter)
 st.map(filtered_data)
 
 
-def file_upload_example():
-    st.title("File Upload Example")
+def main():
+    st.title("File Upload and Git Push Example")
     
     # Display a file uploader widget
     uploaded_file = st.file_uploader("Choose a file")
     
     if uploaded_file is not None:
-        # Process the uploaded file
-        content = uploaded_file.read()
-        st.text("File content:")
-        st.write(content)
+        # Save the uploaded file to a temporary location
+        file_path = os.path.join("/tmp", uploaded_file.name)
+        with open(file_path, "wb") as f:
+            f.write(uploaded_file.read())
+        
+        # Add, commit, and push the file to Git
+        git_add = subprocess.run(["git", "add", file_path])
+        git_commit = subprocess.run(["git", "commit", "-m", "Added file"])
+        git_push = subprocess.run(["git", "push", "origin", "master"])
+        
+        if git_push.returncode == 0:
+            st.success("File uploaded and pushed to Git successfully!")
+        else:
+            st.error("Failed to push the file to Git.")
+
 
 def contact_us():
     st.title("Contact Us")
@@ -104,7 +92,7 @@ def contact_us():
          st.markdown(r'<a href="/pages/hel.html" target="_blank">Click here</a>', unsafe_allow_html=True)
 
 def main():
-    file_upload_example()
+   File_Upload_and_Git_Push_Example_()
     contact_us()
 
 if __name__ == "__main__":
