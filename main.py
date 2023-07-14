@@ -11,7 +11,7 @@ import subprocess
 
  
 
-st.title('uber pickups in NYC')
+st.title('krishaaaaa pickups in NYC')
 
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
@@ -66,12 +66,6 @@ def file_upload():
         file_path = os.path.join("/tmp", uploaded_file.name)
         with open(file_path, "wb") as f:
             f.write(uploaded_file.read())
-        
-        # Add, commit, and push the file to Git
-       
-        git_add = subprocess.run(["git", "-C", " https://github.com/krishaaaaa123/streamlit_tutorial", "add", file_path])
-        git_commit = subprocess.run(["git", "-C", " https://github.com/krishaaaaa123/streamlit_tutorial", "commit", "-m", "Added file"])
-        git_push = subprocess.run(["git", "-C", " https://github.com/krishaaaaa123/streamlit_tutorial", "push", "streamlit_tutorial", "main"], input="krishaaaaa123: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", encoding="utf-8")
         
         
         
